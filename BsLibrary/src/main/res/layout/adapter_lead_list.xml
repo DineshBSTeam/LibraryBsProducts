@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin12"
+    android:layout_marginVertical="@dimen/margin8"
+    app:cardBackgroundColor="@color/pageBackgroundColor"
+    app:cardCornerRadius="@dimen/margin20"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin16">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/iconView"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            app:cardCornerRadius="@dimen/margin4"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:scaleType="fitCenter" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/margin8"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/iconView"
+            app:layout_constraintStart_toEndOf="@+id/iconView"
+            app:layout_constraintEnd_toStartOf="@+id/createdAtInfo"
+            app:layout_constraintTop_toTopOf="@+id/iconView">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text16"
+                android:textStyle="bold"
+                tools:text="Sbi Cashback Credit dsjk dsu dusu udsb card" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="@tools:sample/full_names"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/greySubtitleColor"
+                android:textSize="@dimen/text14"
+                android:textStyle="normal" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/createdAtInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/trailing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="@string/createdAt"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text12" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/margin12"
+                android:layout_height="@dimen/margin12"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin4"
+                android:src="@drawable/ic_info" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subtrailing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text14"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/createdAtInfo"
+            app:layout_constraintTop_toBottomOf="@+id/createdAtInfo"
+            tools:text="20-10-2024" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bodyview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin16"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/margin12"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconView">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="@dimen/margin8"
+                android:paddingVertical="@dimen/margin8">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/lastUpdateInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lastUpdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:text="@string/lastUpdate"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text12" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/margin12"
+                            android:layout_height="@dimen/margin12"
+                            android:layout_marginStart="@dimen/margin4"
+                            android:src="@drawable/ic_info" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lastUpdateDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text14"
+                        android:textStyle="bold"
+                        tools:text="20-10-2024" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/margin8"
+                    android:background="@color/borderColor" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/nextUpdateInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin16"
+                    android:layout_weight="5"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/iconView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iconView">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/nextUpdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="@string/nextUpdate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text12" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/nextUpdateDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text14"
+                        android:textStyle="bold"
+                        tools:text="20-10-2024" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <RelativeLayout
+                    android:id="@+id/raiseQueryView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin16"
+                    android:layout_weight="3"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignStart="@+id/arrowButton"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_toStartOf="@+id/arrowButton"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/haveIssue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text14"
+                            android:textStyle="bold"
+                            tools:text="@string/haveIssue" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/raiseQuery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text12"
+                            tools:text="@string/raiseQuery" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/arrowButton"
+                        android:layout_width="@dimen/margin24"
+                        android:layout_height="@dimen/margin24"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/margin8"
+                        android:layout_marginEnd="@dimen/margin8"
+                        android:backgroundTint="@color/white"
+                        android:src="@drawable/ic_leads_arrow" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/remarkView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin16"
+            app:cardBackgroundColor="@color/yellowBgColorPending"
+            app:cardCornerRadius="@dimen/margin12"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bodyview">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin12">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/remarkStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textColor="@color/yellowTextColorPending"
+                    android:textSize="@dimen/text14"
+                    android:textStyle="bold"
+                    tools:text="Successful" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:maxLines="3"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text12"
+                    tools:text="android x.appcompat. widget.Linear Layout Compat andr oidx.appc ompat. widget.LinearLayout Compat androidx.appc ompat .widget.Lin earLayoutCompat androidx.ap pcompat.widget.LinearL ayoutCompat" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

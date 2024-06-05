@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/closeDialog"
+        android:layout_width="@dimen/margin20"
+        android:layout_height="@dimen/margin20"
+        android:layout_margin="@dimen/margin12"
+        android:src="@drawable/ic_clear_solid"
+        app:layout_constraintEnd_toEndOf="@+id/youtube_player_view"
+        app:layout_constraintTop_toTopOf="@+id/youtube_player_view"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

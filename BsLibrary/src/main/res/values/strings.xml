@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">BanksathiSdk</string>
+    <string name="home">Home</string>
+    <string name="leads">Leads</string>
+    <string name="share">Share</string>
+    <string name="joiningFee">Joining Fee</string>
+    <string name="annualFee">Annual Fee</string>
+    <string name="createdAt">Created At?</string>
+    <string name="createdAtS">Created At</string>
+    <string name="lastUpdate">Last Update</string>
+    <string name="nextUpdate">Next Update</string>
+    <string name="success">Success</string>
+    <string name="submit">Submit</string>
+    <string name="pending">Pending</string>
+    <string name="rejected">Rejected</string>
+    <string name="remark">Remark : </string>
+    <string name="leadStatus">Lead Status : </string>
+    <string name="actionRequired">A.Req.</string>
+    <string name="searchByProductOrPincode">Search by product or pincode</string>
+    <string name="categories">Categories</string>
+    <string name="haveIssue">Have an Issue</string>
+    <string name="products">Products</string>
+    <string name="productDetail">Product Detail</string>
+    <string name="leadDetail">Lead Detail</string>
+    <string name="leadid">Lead ID : </string>
+    <string name="shareWithCustomer">Share With Customers</string>
+    <string name="sdkInitFailedTitle">SDK Initialisation failed!</string>
+    <string name="resolveIt">Resolve it</string>
+    <string name="raiseQuery">Raise Query</string>
+    <string name="information">Information</string>
+    <string name="checkStatus">Check Status</string>
+    <string name="trackYourQuery">Track Your Query</string>
+
+    <string name="totalLeads">Total Leads</string>
+    <string name="allLeads">All Leads</string>
+    <string name="totalLeadsDesc">See your leads stats here</string>
+    <string name="sdkInitFailedMessage">Please verify the SDK integration and review the integration guide.\nIf issues persist, contact the BankSathi team.</string>
+    <string name="title_activity_lead_detail">LeadDetailActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="sorryNoDataFound">Sorry no data found</string>
+    <string name="disclaimer">Disclaimer : </string>
+    <string name="selectReason">Select query reason </string>
+    <string name="disclaimerDesc">Timelines provided for the status updates are subject to the availability of reports and MIS from the respective partners.</string>
+
+    }
+</resources>

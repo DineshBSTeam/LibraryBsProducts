@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="@color/greyTextFieldColor"/>
+                    <corners android:radius="@dimen/margin16" />
+                    <padding android:left="@dimen/margin12"
+                        android:right="@dimen/margin8"
+                        android:top="@dimen/margin8"
+                        android:bottom="@dimen/margin8"/>
+                    <stroke android:width="1dp" android:color="@color/greyTextFieldColorBorder" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

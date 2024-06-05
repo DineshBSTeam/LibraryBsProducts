@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/bottomSheetHeaderBgColor" />
+    <corners android:topLeftRadius="@dimen/margin20"
+        android:topRightRadius="@dimen/margin20" />
+</shape>

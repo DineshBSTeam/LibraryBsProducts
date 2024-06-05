@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/steppers"
+        android:layout_width="35dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/circleView"
+            android:layout_width="@dimen/margin20"
+            android:layout_height="@dimen/margin20"
+            app:circularflow_viewCenter="@dimen/margin1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rounded_solid" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/upperLine"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:foregroundGravity="left"
+            android:scaleType="fitXY"
+            android:src="@drawable/dotted_bg"
+            app:layout_constraintBottom_toTopOf="@+id/circleView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:foregroundGravity="left"
+            android:scaleType="fitXY"
+            android:src="@drawable/dotted_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin12"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/margin20"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/steppers"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin12"
+            app:layout_constraintStart_toEndOf="@+id/steppers">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text16"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/subtrailing"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Sbi Cashback Credit card fgfg fffg jdhf jbdfj jf jdf j  j fjdbj" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/subtrailing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="end"
+                android:lines="1"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text14"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="20-10-2024" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/subStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin8"
+                android:visibility="gone"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/greySubtitleColor"
+                android:textSize="@dimen/text14"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                tools:text="dj fj fj  fjfj fjdj fj fj djdhhf djfhj djjjfd jdj fj jfd jjdf fjjf fjhf jfhf hjfhj  jdjhdfjjfdjhfjdbjbjbsjbjfjjbf jfjf" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin8"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/greyLightSubtitleColor"
+                android:textSize="@dimen/text14"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subStatus"
+                tools:text="dj fj fj  fjfj fjdj fj fj djdhhf djfhj djjjfd jdj fj jfd jjdf fjjf fjhf jfhf hjfhj  jdjhdfjjfdjhfjdbjbjbsjbjfjjbf jfjf" />
+
+            <RelativeLayout
+                android:id="@+id/raiseQueryView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin12"
+                android:background="@drawable/query_border"
+                android:paddingHorizontal="@dimen/margin16"
+                android:paddingVertical="@dimen/margin8"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subtitle">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/leadIcon"
+                    android:layout_width="@dimen/margin28"
+                    android:layout_height="@dimen/margin28"
+                    android:layout_margin="@dimen/margin8"
+                    android:scaleType="fitXY"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_raise_query"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin12"
+                    android:layout_toStartOf="@+id/arrowButton"
+                    android:layout_toEndOf="@+id/leadIcon"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/haveIssue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text14"
+                        android:textStyle="bold"
+                        tools:text="@string/haveIssue" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/raiseQuery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text12"
+                        tools:text="@string/raiseQuery" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/arrowButton"
+                    android:layout_width="@dimen/margin28"
+                    android:layout_height="@dimen/margin28"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin8"
+                    android:layout_marginEnd="@dimen/margin8"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/ic_leads_arrow" />
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

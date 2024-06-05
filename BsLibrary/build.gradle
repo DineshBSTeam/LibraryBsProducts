@@ -1,0 +1,73 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.jetbrains.kotlin.android)
+    id("maven-publish")
+}
+
+android {
+    namespace 'com.lib.bslibrary'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 21
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.8"
+    }
+}
+
+dependencies {
+    // Compose dependencies
+    implementation libs.androidx.runtime
+    implementation libs.androidx.runtime.livedata
+    implementation libs.androidx.ui.tooling.preview
+    implementation libs.androidx.activity.compose
+    implementation libs.androidx.ui
+    implementation libs.androidx.foundation
+    implementation libs.androidx.material
+    api(libs.coil.compose)
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat.v161
+    implementation libs.material
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.lifecycle.livedata.ktx
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+    implementation libs.androidx.lifecycle.extensions
+    implementation libs.androidx.navigation.fragment.ktx
+    implementation libs.androidx.navigation.ui.ktx
+    implementation libs.gson
+    implementation libs.retrofit
+    // Adding the below converter-scalars as retrofit 2.xx is adding string literals
+    // to multipart request https://stackoverflow.com/a/46350910/8831075
+    implementation libs.converter.scalars
+    implementation libs.converter.gson
+    implementation libs.flexbox
+    implementation libs.coil
+    implementation libs.coil.svg
+    implementation libs.core
+    implementation libs.androidx.swiperefreshlayout
+    implementation libs.glide
+}

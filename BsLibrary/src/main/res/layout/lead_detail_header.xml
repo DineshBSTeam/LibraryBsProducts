@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/margin20"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin16">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/leadIcon"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_total_leads"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin16"
+            android:gravity="start|center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/leadIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/leadIcon"
+            app:layout_constraintTop_toTopOf="@+id/leadIcon">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/leadProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text16"
+                android:textStyle="bold"
+                tools:text="@string/totalLeads" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin16"
+            android:gravity="center_vertical"
+            app:cardBackgroundColor="@color/greyColor"
+            app:cardCornerRadius="@dimen/margin12"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/leadIcon">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin16"
+                android:layout_marginVertical="@dimen/margin12"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/successLeadsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="@string/information"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text18" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/infoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end|center_vertical"
+                        android:maxLines="2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text14"
+                        android:textStyle="bold"
+                        tools:text="@string/success" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/statusView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin16"
+                    app:cardBackgroundColor="@color/yellowBgColorPending"
+                    app:cardCornerRadius="@dimen/margin12"
+                    app:cardElevation="0dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/margin12"
+                        android:paddingVertical="@dimen/margin16">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/statusIcon"
+                            android:layout_width="@dimen/margin16"
+                            android:layout_height="@dimen/margin16"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin4"
+                            android:layout_marginEnd="@dimen/margin8"
+                            android:src="@drawable/ic_info" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/remarkStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/yellowTextColorPending"
+                            android:textSize="@dimen/text14"
+                            android:textStyle="bold"
+                            tools:text="Successful" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin16"
+                    android:layout_marginBottom="@dimen/margin4"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:elevation="0dp"
+                        app:cardBackgroundColor="@color/black"
+                        app:cardCornerRadius="@dimen/margin28"
+                        app:cardPreventCornerOverlap="true">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/customerIc"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text20"
+                            android:textStyle="bold"
+                            tools:text="C" />
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/pendingLeadsView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/margin12">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/customerName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textColor="@color/buttonPrimaryColor"
+                            android:textSize="@dimen/text16"
+                            tools:text="Customer Name" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/custMobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text14"
+                            tools:text="556562255" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/phSymbol"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_call" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/whSymbol"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="@dimen/margin8"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_whatsapp" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/remarkLeads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin16"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="@dimen/margin8"
+            android:text="@string/remark"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

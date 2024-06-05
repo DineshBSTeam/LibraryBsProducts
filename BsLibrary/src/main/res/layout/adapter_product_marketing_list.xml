@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/margin12"
+    app:cardElevation="0dp"
+    app:cardPreventCornerOverlap="true">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_marketing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_whatsapp" />
+</androidx.cardview.widget.CardView>
