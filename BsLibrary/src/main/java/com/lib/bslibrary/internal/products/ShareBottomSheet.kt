@@ -25,8 +25,6 @@ import java.io.IOException
 
 class ShareBottomSheet(
     private val shareData: ShareDataModel?,
-    private val imagePath: String?,
-    private val isProfileView: Boolean
 ) : BottomSheetDialogFragment() {
 
     private var sheetBehavior: BottomSheetBehavior<*>? = null
@@ -46,7 +44,7 @@ class ShareBottomSheet(
         val displayMetrics = DisplayMetrics()
         (context as Activity?)!!.windowManager.defaultDisplay.getMetrics(displayMetrics)
         val height = displayMetrics.heightPixels
-        _binding!!.scrollLayout.layoutParams.height = (height*0.6).toInt()
+        _binding!!.scrollLayout.layoutParams.height = (height * 0.6).toInt()
         sheetBehavior = BottomSheetBehavior.from(_binding!!.bottomSheetLayout)
         (sheetBehavior as BottomSheetBehavior<*>).peekHeight = height
 
@@ -61,7 +59,7 @@ class ShareBottomSheet(
             if (scrollY < oldScrollY) {
                 nestedScrollView.scrollTo(0, 0)
                 sheetDismiss = true
-            }else{
+            } else {
                 sheetDismiss = false
             }
         })
@@ -70,10 +68,11 @@ class ShareBottomSheet(
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
                     v.parent.requestDisallowInterceptTouchEvent(false)
-                    if(sheetDismiss){
+                    if (sheetDismiss) {
                         dismiss()
                     }
                 }
+
                 MotionEvent.ACTION_MOVE -> {
                     v.parent.requestDisallowInterceptTouchEvent(true)
                 }
@@ -81,6 +80,7 @@ class ShareBottomSheet(
                 MotionEvent.ACTION_UP -> {
                     v.parent.requestDisallowInterceptTouchEvent(false)
                 }
+
                 else -> {}
             }
             v.onTouchEvent(event)
@@ -104,34 +104,18 @@ class ShareBottomSheet(
 
         _binding!!.shareImage.clipToOutline = true
 
-        if (isProfileView) {
-
-            Util().loadNetworkImage(context!!, imagePath ?: "", _binding!!.shareImage)
-
-            //Hide for Now // use SDK Init Response for Show this
-            _binding!!.profileIc.visibility = View.GONE
-            _binding!!.agentName.visibility = View.GONE
-            _binding!!.agentMob.visibility = View.GONE
-            //hide always
-            _binding!!.contentText.visibility = View.GONE
-
-        } else {
-
-            Util().loadNetworkImage(context!!, shareData?.shareImage ?: "", _binding!!.shareImage)
-            _binding!!.contentText.text = createMessageText()
-
-            _binding!!.profileIc.visibility = View.GONE
-            _binding!!.agentName.visibility = View.GONE
-            _binding!!.agentMob.visibility = View.GONE
-
-        }
-
+        Util().loadNetworkImage(
+            requireActivity(),
+            shareData?.shareImage ?: "",
+            _binding!!.shareImage
+        )
+        _binding!!.contentText.text = createMessageText()
         _binding!!.shareButtonView.setOnClickListener {
-            onShare(context = context!!, _binding!!.captureView)
+            onShare(context = requireActivity(), _binding!!.captureView)
         }
     }
 
-    private fun onShare(context: Context, view: View): Unit? {
+    private fun onShare(context: Context, view: View) {
         return try {
             val message = createMessageText()
             val bitmap = getBitmapFromView(view)

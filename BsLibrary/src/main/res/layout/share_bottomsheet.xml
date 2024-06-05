@@ -55,54 +55,6 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
-
-                            <androidx.cardview.widget.CardView
-                                android:id="@+id/profile_ic"
-                                android:layout_width="45dp"
-                                android:layout_height="45dp"
-                                android:layout_margin="@dimen/margin12"
-                                app:cardCornerRadius="45dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/shareImage">
-
-                                <androidx.appcompat.widget.AppCompatTextView
-                                    android:id="@+id/agentNameFirst"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center"
-                                    android:padding="@dimen/margin4"
-                                    android:textColor="@color/black"
-                                    android:textSize="@dimen/text20"
-                                    android:textStyle="bold"
-                                    tools:text="D" />
-                            </androidx.cardview.widget.CardView>
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/agentName"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/margin12"
-                                android:autoLink="web"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/text14"
-                                app:layout_constraintStart_toEndOf="@+id/profile_ic"
-                                app:layout_constraintTop_toTopOf="@+id/profile_ic"
-                                tools:text="Agent Name" />
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/agentMob"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/margin12"
-                                android:autoLink="web"
-                                android:gravity="start|center_vertical"
-                                android:text="@string/disclaimer"
-                                android:textColor="@color/black"
-                                android:textSize="@dimen/text14"
-                                app:layout_constraintStart_toEndOf="@+id/profile_ic"
-                                app:layout_constraintTop_toBottomOf="@+id/agentName" />
-
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <androidx.appcompat.widget.AppCompatTextView
