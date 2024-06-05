@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.lib.bslibrary.databinding.AdapterProductMarketingListBinding
 import com.lib.bslibrary.internal.helper.Util
-import com.lib.bslibrary.internal.products.ShareBottomSheet
+import com.lib.bslibrary.internal.products.ImagePreviewSheet
 
 class ProductMarketingListAdapter : RecyclerView.Adapter<ProductMarketingViewHolder>() {
 
@@ -27,10 +27,10 @@ class ProductMarketingListAdapter : RecyclerView.Adapter<ProductMarketingViewHol
         val context: Context = holder.itemView.context
         Util().loadNetworkImage(context, marketingList[position] ?: "", holder.binding.imgMarketing)
         holder.binding.imgMarketing.setOnClickListener{
-            val bottomSheetDialogFragment = ShareBottomSheet(null,marketingList[position],true)
+            val bottomSheetDialogFragment = ImagePreviewSheet(null,marketingList[position])
             bottomSheetDialogFragment.show(
                 (context as AppCompatActivity).supportFragmentManager,
-                "ShareBottomSheet"
+                "ImagePreviewSheet"
             )
         }
     }

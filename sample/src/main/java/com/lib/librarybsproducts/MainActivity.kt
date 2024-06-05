@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val launchView : TextView = findViewById(R.id.main)
+        val launchView : TextView = findViewById(R.id.launchView)
         launchView.setOnClickListener{
             val intent = Intent(this, BankSathiLauncher::class.java)
             startActivity(intent)
